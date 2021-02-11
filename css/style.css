@@ -1,0 +1,252 @@
+@charset "utf-8";
+/* CSS Document */
+
+/******* Fonts Face CSS Start **********/
+@font-face {
+    font-family: 'SF Pro Display';
+    src: url('../fonts/SFProDisplay-Regular.eot');
+    src: url('../fonts/SFProDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SFProDisplay-Regular.woff2') format('woff2'),
+        url('../fonts/SFProDisplay-Regular.woff') format('woff'),
+        url('../fonts/SFProDisplay-Regular.ttf') format('truetype'),
+        url('../fonts/SFProDisplay-Regular.svg#SFProDisplay-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+/********* Fonts Face CSS End **********/
+/******* Common Element CSS Start ******/
+*, *:before, *:after       { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+html                       { scroll-behavior: smooth; }
+html,
+body                        { margin: 0px; padding: 0px !important; overflow-x: hidden !important; font-family: 'SF Pro Display'; }
+img                         { border: 0px !important; outline: none; width: 100%; max-width: 100%; }
+ul,ol                       { margin: 0px; padding: 0px; list-style: none;}
+a                           { text-decoration: none; outline: none;}
+textarea                    { resize: none; }
+a:hover,a:focus,
+a:active,a:visited          { outline: none; text-decoration: none; }
+.btn:focus, .btn.focus,
+.form-control:hover,          
+.form-control:focus,
+.form-control:focus:Active    { outline: none !important; box-shadow: none !important; -webkit-box-shadow: none !important; }
+h1                            { font-size: 50px; line-height: 64px; color: #000000; font-family: 'SF Pro Display';  }
+h2                            { font-size: 52px; line-height: 73px; font-family: 'SF Pro Display'; position: relative; }
+h3                            { font-size: 28px; line-height: 44px; color: #000; font-family: 'SF Pro Display'; }
+h4                            { font-size: 20px; line-height: 30px; color: #1C2948;font-family: 'SF Pro Display'; position: relative; text-transform: uppercase; }
+h5                            { font-size: 18px; line-height: 28px;font-family: 'SF Pro Display'; color: #1C2948; text-transform: uppercase; position: relative; z-index: 1; }
+h6                            { font-size: 27px; line-height: 34px; color: #000; font-family: 'SF Pro Display';  }
+p                             { font-size: 18px; line-height: 26px; color: #000; font-weight: 400; font-family: 'SF Pro Display'; }
+/******* Common Element CSS End *********/
+/* -=- Common Button/link CSS -=- */
+
+/* -=- Hamburger Menu CSS Start -=- */
+.btn12:focus,
+.btn12:focus:active                                             { outline: none; border: none; }
+.btn12                                                          { position: absolute; width: 35px; height: 35px; top: 0px; left: 0px; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; }
+.btn12 .icon                                                    { border-radius: 10px; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; position: absolute; height: 4px; width: 35px; top: 50%; background-color: #fff; transform: translateY(-50%); }
+.btn12 .icon:before                                             { border-radius: 10px; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; position: absolute; width: 34px; height: 4px; background-color: #fff; content: ""; top: -10px; left: 0px; }
+.btn12 .icon:after                                              { border-radius: 10px; -webkit-transition-duration: 0.5s; transition-duration: 0.5s; position: absolute; width: 35px; height: 4px; background-color: #fff; content: ""; top: 10px; left: 0px; }
+.btn12.open .icon                                               { -webkit-transition-duration: 0.5s; transition-duration: 0.5s; background: transparent; }
+.btn12.open .icon:before                                        { -webkit-transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px); transform: rotateZ(45deg) scaleX(1.25) translate(6.5px, 6.5px); }
+.btn12.open .icon:after                                         { -webkit-transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px); transform: rotateZ(-45deg) scaleX(1.25) translate(6px, -6px); }
+.btn12:hover                                                    { cursor: pointer; }
+.navbar-toggler                                                 { position: relative; height: 35px; width: 38px; padding: 0px; }
+.navbar-toggler:focus,
+.navbar-toggler:focus:active                                    { outline: none; border: none; box-shadow: none; -webkit-box-shadow: none; }
+.download-btn                                                   { transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+.download-btn:hover                                             { border-color: #fff; }
+/* -=- Profile page CSS Start -=- */
+body.profile-page                                               { display: flex; display: -webkit-flex; background-color: #f7f7f7; }
+body.profile-page main                                          { flex-grow: 1; display: flex; display: -webkit-flex; }
+.profile-section                                                { padding: 80px; width: 592px; flex-shrink: 0; }
+.profile-card-wrap                                              { padding: 50px 40px 40px; background-color: #fff; border-radius: 25px; }
+.profile-pic                                                    { margin: 0px auto 10px; width: 108px; border-radius: 34px; background: url("") no-repeat center center / cover; }
+.profile-pic:before                                             { content: ""; display: block; padding-top: 100%; }
+.prfl-name                                                      { margin: 0px 0px 5px; font-family: 'SF Pro Display'; font-size: 30px; line-height: 1.2; letter-spacing: normal; font-weight: bold; color: #1e1f20; text-align: center; text-transform: capitalize; }
+.prfl-short-name                                                { font-size: 14px; line-height: 1.57; font-family: 'SF Pro Display'; font-weight: normal; color: #8f92a1; text-align: center; text-transform: uppercase; }
+.prfc-values                                                    { margin: 0px 0px 40px; }
+.prfc-values p                                                  { margin: 0px 0px 12px; color: #8f92a1; font-size: 16px; line-height: 1.38; font-family: 'SF Pro Display'; font-weight: 700; }
+.prfc-values span                                               { margin-right: 3px; color: #000; }
+.profile-card-wrap h6                                           { margin: 0px 0px 15px; font-family: 'SF Pro Display'; font-weight: bold; font-size: 16px; line-height: 1.38; color: #000; text-transform: uppercase; }
+.prfl-about                                                     { margin-bottom: 50px; }
+.prfl-about a,
+.prfl-about p                                                   { font-size: 14px; line-height: 24px; color: #8f92a1; font-family: 'SF Pro Display'; }
+.prfl-about a                                                   { line-height: 20px; display: inline-block; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+.prfl-about a:hover                                             { color: #000; }
+.visited-country                                                { margin-top: 22px; }
+.prfl-friend-imgs                                               { margin: 0px -8px; display: flex; display: -webkit-flex; flex-wrap: wrap; }
+.prfl-friend-imgs > li                                          { padding: 0px 8px 16px; width: calc(100% / 5); }
+.prfl-friend-imgs > li a                                        { width: 100%; display: block; border-radius: 12px; }
+.prfl-friend-imgs > li a                                        { background: url("") no-repeat center center / cover; }
+.prfl-friend-imgs > li a:before                                 { content: ""; display: block; padding-top: 100%; }
+/* -=- Blog Section CSS Start -=- */
+.blog-section                                                   { padding: 50px; border-radius: 26px 0px 0px 26px; background-color: #fff; flex-grow: 1; }
+.back-btn                                                       { padding: 18px 24px; display: flex; display: -webkit-flex; align-items: center; background-color: #f7f7f7; border-radius: 14px; font-size: 14px; line-height: 1.43; color: #8f92a1; font-family: 'SF Pro Display'; font-weight: 700; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+.back-btn:hover                                                 { background-color: #e1e1e1; color: #8f92a1; }
+.back-btn img                                                   { margin: 0px 5px 0px 0px; display: inline-block; width: 14px; }
+/* -=- blog nav CSS Start -=- */
+.blog-nav-wrap,
+.blog-nav                                                       { display: flex; display: -webkit-flex; justify-content: space-between; align-items: center; }
+.blog-nav-wrap                                                  { margin-bottom: 40px; }
+.blog-nav ul                                                    { display: flex; display: -webkit-flex; }
+.blog-nav ul li:not(:last-child)                                { margin: 0px 18px 0px 0px; }
+.blog-nav ul li a                                               { position: relative; color: #8f92a1; text-transform: capitalize; font-family: 'SF Pro Display'; font-weight: 600; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+.blog-nav ul li a:before                                        { content: ""; padding: 0px; border-radius: 10px; background-color: #000; position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); -webkit-transform: translateX(-50%); }
+.blog-nav ul li.active a:before                                 { padding: 3px; }
+.blog-nav ul li.active a,
+.blog-nav ul li a:hover                                         { color: #000; }
+/* -=- Blog main title Section CSS Start -=- */
+.blog-main-title-section                                        { margin: 0px 0px 14px; }
+.blog-main-title-section h1                                     { margin: 0px; font-size: 22px; line-height: 1.36; color: #1e1f20; font-family: 'SF Pro Display'; font-weight: 700; }
+.grey-txt                                                       { margin: 0px; font-size: 12px; line-height: 1.67; color: #8f92a1; font-family: 'SF Pro Display'; font-weight: normal; }
+.blog-create-date .blog-create-name                             { margin: 0px; font-size: 14px; line-height: 1.57; color: #1e1f20; font-family: 'SF Pro Display'; font-weight: 600; }
+/* -=- Blog main image Section CSS Start -=- */
+.main-blog-like-share-wrap                                      { margin-bottom: 26px; display: flex; display: -webkit-flex; align-items: center; }
+.blog-main-img                                                  { margin: 20px 0px; max-height: 380px; border-radius: 12px; background: url("") no-repeat center center / cover; }
+.blog-main-img:before                                           { content: ""; padding-top: 65%; display: block; }
+.like-and-cmmts                                                 { margin-right: 20px; display: flex; display: -webkit-flex; }
+.like-and-cmmts li                                              { margin: 0px 30px 0px 0px; }
+.like-and-cmmts li p                                            { margin: 0px; padding-left: 26px; background: url("../images/like.svg") no-repeat center left / 20px 20px; font-size: 14px; line-height: 1.43; font-family: 'SF Pro Display'; color: #8f92a1; }
+.like-and-cmmts li p.comment-txt                                { background-image: url('../images/chat.svg'); }
+/* -=- Locate share buttons CSS Start -=- */
+.locate-share-btns                                              { display: flex; display: -webkit-flex; }
+.locate-share-btns li:not(:last-child)                          { margin-right: 10px; }
+.locate-share-btns li a                                         { padding: 8px 34px 8px 12px; border-radius: 8px; background: #f7f7f7 url('../images/location.svg') no-repeat center right 10px / 18px 18px;  display: inline-block; font-size: 16px; line-height: 20px; color: #1e1f20; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+.locate-share-btns li a:hover,
+.locate-share-btns li a:focus                                   { background-color: #e1e1e1; }
+.locate-share-btns li a.share-btn                               { background-image: url('../images/share.svg');}
+/* -=- Blog Main Area CSS Start -=- */
+.blog-content-area                                              { margin-bottom: 80px; }
+.blog-content-area li,
+.blog-content-area p                                            { margin-bottom: 15px; font-size: 14px; line-height: 1.57; color: #8f92a1; font-family: 'SF Pro Display'; font-weight: normal; }
+.blog-content-area li                                           { margin-bottom: 5px; }
+.blog-content-area ul                                           { list-style: disc inside; }
+.blog-content-area ol                                           { list-style: decimal inside; }
+/* -=- Blog Commnet Section CSS start -=- */
+.blog-comment-wrap                                              {  }
+.blog-comment-wrap li                                           { margin-bottom: 18px; }
+.cmnt-prfl-wrap-box                                             { margin-bottom: 8px; display: flex; display: -webkit-flex; justify-content: space-between; align-items: center; }
+.cmn-prfl-inner-wrap                                            { display: flex; display: -webkit-flex; align-items: center; }
+.cmnt-pic                                                       { margin-right: 10px; padding: 16px; border-radius: 8px; flex-shrink: 0; background: url("") no-repeat center center / cover;  }
+.cmnt-prfl-nm                                                   { margin: 0px; font-size: 16px; line-height: 1.38; color: #1e1f20; font-weight: normal; text-transform: capitalize; }
+.cmnt-box                                                       { font-size: 14px; line-height: 1.57; color: #8f92a1; font-family: 'SF Pro Display'; font-weight: normal; }
+/* -=- Recent blog Section CSS Start -=- */
+.recent-blog-prfl                                               { margin-bottom: 30px; padding: 20px 23px; border: 2px solid rgba(143, 146, 161, 0.2); border-radius: 12px; display: flex; display: -webkit-flex; align-items: center; }
+.recent-blog-prfl-img                                           { margin-right: 15px; padding: 23px; border-radius: 10px; background: url("images/profile.jpg") no-repeat center center / cover; }
+.recent-prfl-nm                                                 { font-size: 16px; line-height: 1.38; color: #1e1f20;  font-family: 'SF Pro Display'; font-weight: 700; text-transform: capitalize; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+.recent-prfl-nm:hover                                           { color: #8f92a1; }
+.recent-post-places > span:not(:last-child)                     { margin-right: 8px; }
+/* -=- Recent Blog Post CSS Start -=- */
+.recent-blog-post                                               { margin-bottom: 25px; padding: 23px; border-radius: 12px; border: 2px solid rgba(143, 146, 161, 0.2); }
+.recent-post-img                                                { margin-bottom: 25px; width: 100%; border-radius: 12px; background: url("") no-repeat center center / cover; }
+.recent-post-img:before                                         { content: ""; display: block; padding-top: 67%; }
+.recent-post-txt a.read-more,
+.recent-post-txt p                                              { margin-bottom: 2px; font-size: 14px; line-height: 1.57; color: #8f92a1;  font-family: 'SF Pro Display'; font-weight: normal; }
+.recent-post-txt p                                              { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+.recent-post-txt a.read-more                                    { text-transform: uppercase; letter-spacing: 1px; font-weight: bold; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+.recent-post-txt a.read-more:hover                              { color: #1e1f20; text-decoration: underline; }
+.recent-post-like-share-wrap                                    { display: flex; display: -webkit-flex; align-items: flex-end; justify-content: space-between; }
+.recent-blog-post .like-and-cmmts                               { margin-right: 6px;  }
+.recent-blog-post .like-and-cmmts li p                          { color: #1e1f20; }
+.recent-blog-post .like-and-cmmts li                            { margin: 0px 20px 0px 0px; }
+.recent-blog-post .like-and-cmmts li:last-child                 { margin: 0px; }
+.recent-blog-post .locate-share-btns                            { display: block; }
+.recent-blog-post .locate-share-btns li:not(:last-child)        { margin-bottom: 4px; }
+.recent-blog-post .locate-share-btns a                          { padding: 4px 34px 4px 12px; background-color: transparent;  }
+
+
+/****** Responsive CSS Start ******/
+@media(min-width: 768px){
+    /* -=- Header CSS Start -=- */
+    header                                                         { background-color: #171f24; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; z-index: 999 !important; }
+    header .navbar-brand                                           { margin: 0px; padding: 0px; display: block; width: 85px; flex-shrink: 0; }
+    header .navbar                                                 { padding: 42px 34px 82px; min-height: 100vh;  width: 165px; position: relative; flex-direction: column; }
+    header .navbar-brand img                                       { max-height: 58px; width: auto; }
+    header .navbar-nav .nav-item .nav-link                         { padding: 0px; display: block; text-align: center; font-size: 16px; line-height: 26px; color: #8f92a1; font-family: 'SF Pro Display'; font-weight: 700; text-transform: uppercase; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+    header .navbar-nav .nav-item.active a.nav-link                 { color: #fff; }
+    header .navbar-nav .nav-item a.nav-link:hover                  { color: #fff; }
+    header .navbar-nav                                             { width: 100%; align-items: center; }
+    .navbar-nav.inner-nav                                          { flex-direction: column; }
+    .download-btn                                                  { padding: 12px; border: 3px solid #454b4f; border-radius: 18px; display: inline-block; }
+    .download-btn img                                              { width: 28px; }
+    .navbar-nav.inner-nav > li:not(:last-child)                    { margin-bottom: 20px; }
+    /* -=- Main Content Area CSS Start -=- */
+
+}
+ @media(min-width: 1200px) and ( max-width: 1399px){
+    /* -=- Profile Section CSS Start -=- */
+    .profile-section                                            { padding: 50px 50px; width: 440px; }
+    .profile-card-wrap                                          { padding: 50px 30px 40px; }
+    /* -=- recent Blog Section CSS Start -=- */
+    .recent-post-img                                            { margin-bottom: 18px; }
+    .recent-blog-post .like-and-cmmts li p                      { padding-left: 22px; font-size: 12px; background-size: 18px 18px; }
+    .recent-blog-post .locate-share-btns a                      { font-size: 14px; background-size: 18px 18px; }
+ }
+ @media(min-width: 1200px){
+    .navbar-collapse                                                { flex-direction: column; justify-content: flex-end; }
+ }
+ @media(min-width: 768px) and (max-width: 992px){
+    /* -=- Header CSS Start -=- */
+    header .collapse:not(.show)                                     { display: block; }
+    header .collapse.navbar-collapse                                { align-items: flex-end; display: flex; -webkit-display: flex; }
+    .navbar-toggler                                                 { display: none; }
+ }
+ @media(min-width: 768px) and (max-width: 1200px){
+    /* -=- Main Area CSS Start -=- */
+    body.profile-page main                                        { display: block; }
+    /* -=- Profile section CSS Start -=- */
+    .profile-section                                               { margin: 0px auto; padding: 50px 0px; width: 480px; }
+ }
+ @media(max-width: 767px){
+    body.profile-page           { display: block; }
+    /* -=- Header CSS Start -=- */
+    header                        { background-color: #171f24; }
+    header .navbar                { padding: 10px 15px; }
+    header .navbar-brand          { padding: 0px; margin: 0px; }
+    header .navbar-brand img      { max-width: 150px; }
+    header .navbar-collapse       { padding: 60px 34px 60px; z-index: 998; min-height: 100vh; background-color: #171f24;  width: 100%; position: fixed; top: 0px; right: 0px; display: flex; display: -webkit-flex; align-items: center; }
+    .navbar-toggler               { z-index: 999; }
+    header .navbar-nav .nav-item .nav-link                         { padding: 0px; display: block; text-align: center; font-size: 16px; line-height: 26px; color: #8f92a1; font-family: 'SF Pro Display'; font-weight: 700; text-transform: uppercase; transition-duration: 0.4s; -webkit-transition-duration: 0.4s; }
+    header .navbar-nav .nav-item.active a.nav-link                 { color: #fff; }
+    header .navbar-nav .nav-item a.nav-link:hover                  { color: #fff; }
+    header .navbar-nav                                             { width: 100%; align-items: center; }
+    .navbar-nav.inner-nav                                          { flex-direction: column; }
+    .download-btn                                                  { padding: 12px; border: 3px solid #454b4f; border-radius: 18px; display: inline-block; }
+    .download-btn img                                              { width: 28px; }
+    .navbar-nav.inner-nav > li:not(:last-child)                    { margin-bottom: 20px; }
+ }
+ @media(min-width: 576px) and (max-width: 768px){
+    /* -=- Profile section CSS Start -=- */
+    .prfc-values > div                                  { width: 50%; }
+    .profile-section                                    { margin: 0px auto; padding: 30px; width: 450px; }
+ }
+ @media(max-width: 768px){
+    body.profile-page main                          { display: block; }
+    .prfc-values > div                              { width: 50%; }
+    .prfc-values p                                  { font-size: 14px; }
+    .prfl-name                                      { font-size: 26px; }
+    .profile-section                                { margin: 0px auto; padding: 15px 0px; width: 100%; max-width: 350px; }
+    .profile-card-wrap                              { padding: 30px 15px; }
+    .prfl-friend-imgs > li                          { width: calc(100% / 4); }
+    .profile-pic                                    { width: 90px; border-radius: 18px; }
+    .prfc-values                                    { margin: 0px 0px 20px; }
+    .prfl-about                                     { margin-bottom: 30px; }
+    /* -=- Blog Section CSS Start -=- */
+    .blog-section                                   { padding: 30px 15px; border-radius: 26px 26px 0px 0px; }
+    .blog-nav ul li a                               { font-size: 13px; }
+    .back-btn                                       { padding: 10px 14px; }
+    .back-btn img                                   { width: 10px; }
+    .like-and-cmmts li:last-child                   { margin-right: 0px; }
+    .like-and-cmmts li                              { margin: 0px 15px 0px 0px; }
+    .like-and-cmmts li p                            { padding-left: 22px; font-size: 12px; background-size: 18px 18px; }
+    .locate-share-btns li a                         { font-size: 12px; background-size: 16px 16px; }
+    .main-blog-like-share-wrap                      { margin-bottom: 12px; }
+    .blog-content-area li, .blog-content-area p     { margin-bottom: 10px; }
+ }
+  @media(min-width: 768px){
+    /* -=- main area section CSS Start -=- */
+    body.profile-page main                           { margin-left: 165px; }
+    header                                           { position: fixed; top: 0px; left: 0px; } 
+ }
+/*================= Responsive CSS End =========================*/
